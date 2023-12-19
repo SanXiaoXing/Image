@@ -1,0 +1,46 @@
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">
+  <style>
+    .bubble {
+      fill: #E0F0FF;
+      stroke: #7EC0EE;
+      stroke-width: 2;
+      filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    }
+    .text {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      fill: #333;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+  </style>
+  <path class="bubble" d="M10,10 Q10,0 20,0 L280,0 Q290,0 290,10 L290,60 Q290,70 280,70 L20,70 Q10,70 10,60 Z" />
+  <text class="text" x="150" y="40">SanXiaoXing</text>
+</svg> -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">
+  <style>
+    .bubble {
+      fill: transparent;
+      stroke-width: 2;
+      filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    }
+    .text {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .dark .text {
+      fill: #fff;
+    }
+    .light .text {
+      fill: #000;
+    }
+  </style>
+  <rect class="bubble" x="10" y="10" width="280" height="60" />
+  <text class="text dark" x="150" y="40">SanXiaoXing <tspan fill="#FF0000">❤</tspan> Code</text>
+  <text class="text light" x="150" y="40">SanXiaoXing <tspan fill="#FF0000">❤</tspan> Code</text>
+</svg>
