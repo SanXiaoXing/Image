@@ -1,0 +1,7 @@
+<control>
+	<address>0x00</address>
+	<delay>2000</delay>
+	<interval>1000</interval>
+	<contraction>1000</contraction>
+	<count>10</count>
+</control>
