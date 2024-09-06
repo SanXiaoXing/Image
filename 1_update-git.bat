@@ -3,10 +3,17 @@
 setlocal
 
 :: 获取当前日期，格式为 YYYY-MM-DD
-for /f "tokens=2-4 delims=/ " %%a in ('date /t') do (
+for /f "tokens=1-3 delims=/- " %%a in ("%DATE%") do (
     set month=%%a
     set day=%%b
     set year=%%c
+)
+
+:: 处理不同区域日期格式，例如 MM/DD/YYYY 或 DD/MM/YYYY
+if %year% lss 1000 (
+    set temp=%year%
+    set year=%month%
+    set month=%temp%
 )
 
 :: 获取当前时间，精确到分钟，格式为 HH:MM
