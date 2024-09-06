@@ -1,7 +1,18 @@
 @echo off
 
-:: 调用 PowerShell 获取当前日期和时间，格式为 YYYY-MM-DD HH:MM
-for /f %%i in ('powershell -command "Get-Date -Format \'yyyy-MM-dd HH:mm\'"') do set current_time=%%i
+:: 使用 WMIC 获取当前日期和时间，格式为 YYYY-MM-DD HH:MM
+for /f "tokens=1,2 delims=." %%a in ('wmic os get localdatetime ^| find "."') do (
+    set datetime=%%a
+)
+
+:: 提取年月日和小时分钟，并重新格式化
+set year=%datetime:~0,4%
+set month=%datetime:~4,2%
+set day=%datetime:~6,2%
+set hour=%datetime:~8,2%
+set minute=%datetime:~10,2%
+
+set current_time=%year%-%month%-%day% %hour%:%minute%
 
 :: 设置提交信息
 set commit_message=add(blog): %current_time%
