@@ -15,7 +15,7 @@ set minute=%datetime:~10,2%
 set current_time=%year%-%month%-%day% %hour%:%minute%
 
 :: 设置提交信息
-set commit_message=add(blog): %current_time%
+set commit_message=add(image): %current_time%
 
 :: 添加所有更改到暂存区
 git add .
