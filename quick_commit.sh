@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 获取当前时间，格式为 YYYY-MM-DD HH:MM
-current_time=$(date +"%Y-%m-%d %H:%M")
+current_time=$(date +"%Y-%m-%d %H:%M:%S")
 
 # 设置提交信息
 commit_message="add(blog): ${current_time}"
