@@ -14,5 +14,3 @@ git commit -m "${commit_message}"
 
 # 推送更改到远程仓库
 git push origin main
-
-pause
